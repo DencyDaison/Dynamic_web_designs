@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  </head>
+ <body>
+   <input type="text" id="un" name="uname" placeholder="username"  required><br><br><br><br>
+   <div id="feedback"></div><br><br><br>
+   <input type="password" name="pswd" placeholder="password" required>
+ </body>
+
+ <script>
+   
+   function checkuname()
+   {
+     var msg=document.getElementById('feedback');
+     if(un.value.length<5)
+     {
+       msg.textContent='username must be 5 character or more';
+      }
+    else
+    {
+      msg.textContent='';
+    }
+}
+    var un=document.getElementById('un');
+    un.addEventListener('blur',checkuname);
+
+  </script>
+</html>

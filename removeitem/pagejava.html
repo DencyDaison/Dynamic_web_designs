@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>javascript</title>
+     <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+          <div id="fruit">
+            <h1>LIST OF FRUITS</h1>
+            <h2>FRESH ITEMS</h2>
+              <ul>
+                    <li id="one" class="fresh"><em>FRESH</em>ORANGE</li>
+                    <li id="two" class="fresh">GRAPES</li>
+                    <li id="three" class="fresh">APPLE</li>
+                    <li id="four" class="mango">MANGO</li>
+              </ul>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              <input id="b" type="submit" name="b" value="Add item" onclick="add()">
+              <input id="b" type="submit" name="b1" value="Remove item" onclick="remove()">
+          </div>
+          <!--add element-->
+          <script>
+                  function add()
+                  {
+                        // Create a new element and store it in a variable.
+                        var newEl = document.createElement('li');
+                        // Create a text node and store it in a variable.
+                        var newText = document.createTextNode('banana');
+                        // Attach the new text node to the new element.
+                        newEl.appendChild(newText);
+                        // Find the position where the new element should be added.
+                        var position = document.getElementsByTagName('ul')[0];
+                        // Insert the new element into its position.
+                        position.appendChild(newEl);
+                  }
+
+                  //Remove element
+                  function remove()
+                  {
+                        // Store the element to be removed in a variable.
+                        var removeEl = document.getElementsByTagName('li')[2];
+                        // Find the element which contains t5e element to be removed.
+                        var containerEl = document.getElementsByTagName('ul')[0];
+                        // Remove the element.
+                        containerEl.removeChild(removeEl);
+                  }
+        </script>
+  </body>
+</html>
