@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body,html{
+          height:100%;
+          width:100%;
+            background:#ff80bf;
+          }
+          /* Create three equal columns that floats next to each other */
+        .row
+        {
+          height:100%;
+        }
+        .column
+        {
+          float: left;
+          width: 27%;
+          height:90%;
+          margin-left:5%;
+          border:2px solid yellow;
+          padding: 2px 3px;
+      }
+          </style>
+</head>
+<body>
+
+          <center><h2><font color="#EF350C">REGISTER FORM</font></h2></center>
+
+          <div class="row">
+            <div class="column" style="background-color:#ffe6ff;">
+                  <h2>&nbsp&nbsp&nbsp&nbspWELCOME</h2>
+                  <p>&nbsp&nbspenjoy your weekend...</p>
+                  <img src="f33.jpg" alt="" style="margin-top:1%;height:83%;width:100%;">
+            </div>
+            <div class="column" style="background-color:#ffe6ff ;">
+                      <h2>&nbsp&nbsp&nbsp&nbspSIGN UP</h2><br><br>
+                      <label style="margin-left:5%;" for=Name><b>Name</b></label><br>
+                      <input type="text" style="width:60%;height:5%;padding-left:4%;margin-left:15%;" placeholder="name" name="name" id="name" onblur="namecheck()" required><br><br>
+                      <div id="n"></div><br>
+
+                      <label style="margin-left:5%;" for="email"><b>Email</b></label><br>
+                      <input type="text" style="width:60%;height:5%;padding-left:4%;margin-left:15%;" placeholder="Enter Email" name="email" id="email" onblur="emailcheck()" required><br><br>
+                      <div id="em"></div><br>
+
+                      <label style="margin-left:5%;" for="psw"><b>Password</b></label><br>
+                      <input type="password" style="width:60%;height:5%;padding-left:4%;margin-left:15%;" placeholder="Enter Password" name="pswd" id="pswd"onblur="passwordchecking()" ><br><br>
+                      <div id="pass"></div>
+
+                      <label style="margin-left:5%;" for="psw-repeat"><b>confirm Password</b></label><br>
+                      <input type="password" style="width:60%;height:5%;padding-left:4%;margin-left:15%;" placeholder="Repeat Password" name="repswd" id="rpswd" onblur="confirmpassword()" ><br><br>
+                      <div id="repass"></div>
+                      <img src="f4.jpg" alt="" style="margin-top:none;height:33%;width:100%;">
+
+            </div>
+            <div class="column" style="background-color:#ffe6ff;">
+                    <h2>&nbsp&nbsp&nbsp&nbspcontinue...</h2><br>
+                    <img src="f5.jpg" alt="" style="margin-top:none;height:25%;width:100%;"><br><br>
+                    <label style="margin-left:5%;" for="psw-repeat"><b>Birthday</b></label><br>
+                    <input type="date" style="width:60%;height:5%;padding-left:4%;margin-left:15%;" placeholder="birthday" name="bday" id="bday" onblur="checkdate()"><br><br>
+                    <div id="date"></div>
+
+                    <label style="margin-left:5%;" for="psw-repeat"><b>Short Bio(maximum 8 characters)</b></label><br>
+                     <input type="textarea" style="width:60%;height:5%;padding-left:4%;margin-left:15%;" rows="10" cols="50" placeholder="bio info" name="bio" id="bio" onkeyup="checkchar()"><br><br><br><br>
+                     <div id="short"></div><br><br>
+
+                    <input style="font-size:150%;width:60%;height:8%;border-radius:45px;margin-left:19%;color:#cc0066;" id="bbb" type="button" name="b" value="REGISTER" onclick="vali()">
+            </div>
+          </div>
+          <script src="validation.js" charset="utf-8"></script>
+
+</body>
+</html>
